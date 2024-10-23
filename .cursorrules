@@ -1,0 +1,72 @@
+{
+  "folders": {
+    "src/app": {
+      "description": "Main application directory for pages and components",
+      "required": true,
+      "depth": 3
+    },
+    "src/components": {
+      "description": "Reusable components",
+      "required": true,
+      "depth": 2
+    },
+    "src/lib": {
+      "description": "Utility functions and configurations (Supabase, Clerk)",
+      "required": true,
+      "depth": 1
+    },
+    "src/styles": {
+      "description": "CSS and Tailwind styles",
+      "required": false
+    },
+    "src/hooks": {
+      "description": "Custom React hooks for handling logic",
+      "required": true,
+      "depth": 2
+    }
+  },
+  "files": {
+    "src/app/api/auth/**": {
+      "description": "Clerk API routes for handling user authentication",
+      "required": true
+    },
+    "src/app/dashboard/**": {
+      "description": "User dashboard pages for income, taxes, and budgeting",
+      "required": true
+    },
+    "src/app/landing/**": {
+      "description": "Landing page structure including CTA, features, and testimonials",
+      "required": true
+    },
+    "src/app/auth/**": {
+      "description": "Authentication pages for sign-in and sign-up",
+      "required": true
+    }
+  },
+  "rules": {
+    "enforceTailwind": {
+      "description": "Enforce usage of Tailwind CSS classes",
+      "required": true
+    },
+    "enforceShadcn": {
+      "description": "Ensure Shadcn UI components are used where applicable",
+      "required": true
+    },
+    "apiRoutesNaming": {
+      "description": "API route filenames should be lowercase and use hyphens",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "noInlineStyles": {
+      "description": "Do not use inline styles in React components",
+      "required": true
+    },
+    "useSupabase": {
+      "description": "Supabase should be used for all backend logic",
+      "required": true
+    },
+    "useClerkAuth": {
+      "description": "Clerk should handle all user authentication",
+      "required": true
+    }
+  }
+}
