@@ -3,6 +3,7 @@ import { ClerkProvider } from '@clerk/nextjs';
 import './globals.css';
 import Script from 'next/script';
 import { Metadata } from 'next';
+import { neobrutalism } from '@clerk/themes';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://clerk-next-app.vercel.app/'),
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <ClerkProvider
         appearance={{
+          baseTheme: neobrutalism, // Fixing the theme, this is where you set the theme
           variables: { colorPrimary: '#000000' },
           elements: {
             formButtonPrimary:
@@ -38,7 +40,7 @@ export default function RootLayout({
           }
         }}
       >
-        <body className={`min-h-screen flex flex-col antialiased`}>
+        <body className="min-h-screen flex flex-col antialiased">
           {children}
         </body>
       </ClerkProvider>
